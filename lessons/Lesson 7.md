@@ -1,156 +1,70 @@
-# st.slider
+# st.selectbox
 
-`st.slider` allows the display of a slider input widget.
+`st.selectbox` allows the display of a select widget.
 
-The following data types are supported: int, float, date, time, and datetime.
+---
 
-## What we're building?
+## Goal of the app
 
-A simple app that shows the various ways on how to accept user input by adjusting the slider widget.
+1. User selects a color
+2. App prints out the selected color
 
-Flow of the app:
-1. User selects value by adjusting the slider widget
-2. App prints out the selected value
-
-## Demo app
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.slider/)
-
+---
 
 ## Code
-Here's how to use st.slider:
+
+Create a new python file called `st-app-06.py`
+
+Here's the code:
 
 ```python
 import streamlit as st
-from datetime import time, datetime
 
-st.header('st.slider')
+st.header('st.selectbox')
 
-# Example 1
+option = st.selectbox(
+     'What is your favorite color?',
+     ('Blue', 'Red', 'Green'))
 
-st.subheader('Slider')
-
-age = st.slider('How old are you?', 0, 130, 25)
-st.write("I'm ", age, 'years old')
-
-# Example 2
-
-st.subheader('Range slider')
-
-values = st.slider(
-     'Select a range of values',
-     0.0, 100.0, (25.0, 75.0))
-st.write('Values:', values)
-
-# Example 3
-
-st.subheader('Range time slider')
-
-appointment = st.slider(
-     "Schedule your appointment:",
-     value=(time(11, 30), time(12, 45)))
-st.write("You're scheduled for:", appointment)
-
-# Example 4
-
-st.subheader('Datetime slider')
-
-start_time = st.slider(
-     "When do you start?",
-     value=datetime(2020, 1, 1, 9, 30),
-     format="MM/DD/YY - hh:mm")
-st.write("Start time:", start_time)
-
+st.write('Your favorite color is ', option)
 ```
+
+---
 
 ## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
-```python
-import streamlit as st
-from datetime import time, datetime
-```
 
-This is followed by creating a header text for the app:
-```python
-st.header('st.slider')
-```
-
-**Example 1**
-
-Slider:
+We create a variable called `option` that will accept user input in the form of a **select** input widget via the `st.selectbox()` command.
 
 ```python
-st.subheader('Slider')
-
-age = st.slider('How old are you?', 0, 130, 25)
-st.write("I'm ", age, 'years old')
+option = st.selectbox(
+     'What is your favorite color?',
+     ('Blue', 'Red', 'Green'))
 ```
+As we can see from the above code box, the `st.selectbox()` command accepts 2 input arguments:
+1. The text that goes above the select widget, i.e. `'What is your favorite color?'`
+2. The possible values to select from `('Blue', 'Red', 'Green')`
 
-As we can see, the `st.slider()` command
-is used to collect user input about the age of users.
-
-The first input argument displays the text just above the **slider** widget asking `'How old are you?'`.
-
-The following three integers `0, 130, 25` represents the minimum, maximum and default values, respectively.
-
-**Example 2**
-
-Range slider:
-
+Finally, we'll print out the selected color as follows:
 ```python
-st.subheader('Range slider')
-
-values = st.slider(
-     'Select a range of values',
-     0.0, 100.0, (25.0, 75.0))
-st.write('Values:', values)
+st.write('Your favorite color is ', option)
 ```
 
-The range slider allow selection of a lower and upper bound value pair.
+---
 
-The first input argument displays the text just above the **range slider** widget asking `'Select a range of values'`.
+## Run the app
 
-The following three arguments `0.0, 100.0, (25.0, 75.0)` represents the minimum and maximum values while the last tuple denotes the default values to use as the selected lower (25.0) and upper (75.0) bound values.
-
-**Example 3**
-
-Range time slider:
-
-```python
-st.subheader('Range time slider')
-
-appointment = st.slider(
-     "Schedule your appointment:",
-     value=(time(11, 30), time(12, 45)))
-st.write("You're scheduled for:", appointment)
+```
+streamlit run st-app-06.py
 ```
 
-The range time slider allows selection of a lower and upper bound value pair of datetime.
+---
 
-The first input argument displays the text just above the **range time slider** widget asking `'Schedule your appointment:`.
+## Demo app
+Should look something like this: 
 
-The default values for the lower and upper bound value pairs of datetime are set to 11:30 and 12:45, respectively.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.selectbox/)
 
-**Example 4**
+---
 
-Datetime slider:
-
-```python
-st.subheader('Datetime slider')
-
-start_time = st.slider(
-     "When do you start?",
-     value=datetime(2020, 1, 1, 9, 30),
-     format="MM/DD/YY - hh:mm")
-st.write("Start time:", start_time)
-```
-
-The datetime slider allows selection of a datetime.
-
-The first input argument displays the text just above the **datetime** slider widget asking `'When do you start?'`.
-
-The default value for the datetime was set using the `value` option to be January 1, 2020 at 9:30
-
-## Further reading
-You can also explore the following related widget:
-- [`st.select_slider`](https://docs.streamlit.io/library/api-reference/widgets/st.select_slider)
+## References 
+More about [`st.selectbox`](https://docs.streamlit.io/library/api-reference/widgets/st.selectbox)

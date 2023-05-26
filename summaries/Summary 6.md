@@ -1,1 +1,1 @@
-In this lesson, we will 
+In this lesson, we will create a simple app for displaying a line chart using `st.line_chart`.

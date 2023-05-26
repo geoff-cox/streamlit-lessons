@@ -1,18 +1,87 @@
-# Deploying your Streamlit app with Streamlit Community Cloud
+# st.line_chart
 
-## Streamlit Community Cloud
+`st.line_chart` displays a line chart.
 
-[Streamlit Community Cloud](https://streamlit.io/cloud) is a hosting service for easily deploying Streamlit apps.
+This is syntax-sugar around `st.altair_chart`. The main difference is this command uses the data's own column and indices to figure out the chart's spec. As a result this is easier to use for many "just plot this" scenarios, while being less customizable.
 
-## Sign up for Streamlit Community Cloud
+If `st.line_chart` does not guess the data specification correctly, try specifying your desired chart using st.altair_chart.
 
-You can easily sign up for [Streamlit Community Cloud](https://streamlit.io/cloud) by simply logging in with Google or GitHub account.
+---
 
-## Deploy a Streamlit app
+## Goal of the app
 
-To deploy a Streamlit app, do the following:
-1. Sign in with GitHub or Gmail credentials
-2. Pick a repo, branch and file
-3. Click Deploy
+1. Create a `Pandas` DataFrame from numbers randomly generated via `NumPy`.
+2. Create and display the line chart via `st.line_chart()` command.
 
-Then any time you do a git push your app will update immediately.
+---
+
+## Code
+
+Create a new python file called `st-app-05.py`
+
+Here's how to use [`st.line_chart`](https://docs.streamlit.io/library/api-reference/charts/st.line_chart):
+
+```python
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+st.header('Line chart')
+
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
+```
+
+---
+
+## Line-by-line explanation
+
+Import our libraries:
+
+```python
+import streamlit as st
+import pandas as pd
+import numpy as np
+```
+
+Next, we create a header text for the app:
+```python
+st.header('Line chart')
+```
+
+Then, we create a DataFrame of randomly generated numbers that contains 3 columns.
+```python
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+```
+
+Finally, a line chart is created by using `st.line_chart()` with the DataFrame stored in the `chart_data` variable as  the input data:
+```python
+st.line_chart(chart_data)
+```
+
+---
+
+## Run the app
+
+```
+streamlit run st-app-05.py
+```
+
+---
+
+## Demo app
+
+Should look like this:
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.line_chart/)
+
+---
+
+## Further reading
+Read more about the following related Streamlit command from which [`st.line_chart`](https://docs.streamlit.io/library/api-reference/charts/st.line_chart) is based on:
+- [`st.altair_chart`](https://docs.streamlit.io/library/api-reference/charts/st.altair_chart)

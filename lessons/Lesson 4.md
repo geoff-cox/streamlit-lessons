@@ -13,7 +13,7 @@ In addition to being able to display text, the following can also be displayed v
 
 ---
 
-## Goal of the app:
+## Goal of the app
 
 Illustrate various ways on how to use the `st.write()` command for displaying text, numbers, DataFrames and plots.
 

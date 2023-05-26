@@ -1,1 +1,1 @@
-In this lesson, we will 
+In this lesson, we will create a simple app that asks the user what their favorite color is using `st.selectbox`.
