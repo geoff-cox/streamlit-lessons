@@ -11,19 +11,19 @@ In addition to being able to display text, the following can also be displayed v
 - Plots/graphs/figures from `matplotlib`, `plotly`, `altair`, `graphviz`, `bokeh`
 - And more (see [st.write on API docs](https://docs.streamlit.io/library/api-reference/write-magic/st.write))
 
-## What we're building?
+---
 
-A simple app showing the various ways on how to use the `st.write()` command for displaying text, numbers, DataFrames and plots.
+## Goal of the app:
 
-## Demo app
+Illustrate various ways on how to use the `st.write()` command for displaying text, numbers, DataFrames and plots.
 
-The deployed Streamlit app should look something like the one shown in the below link:
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.write/)
+---
 
 ## Code
 
-Here's how to use st.write:
+Create a new python file called `st-app-03.py`
+
+Here's the code for the app:
 
 ```python
 import numpy as np
@@ -63,36 +63,41 @@ c = alt.Chart(df2).mark_circle().encode(
 st.write(c)
 ```
 
+---
+
 ## Line-by-line explanation
 
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
+Import the libraries we need:
 
 ```python
+import numpy as np
+import altair as alt
+import pandas as pd
 import streamlit as st
 ```
 
-This is followed by creating a header text for the app:
+Create a header for the app:
 
 ```python
 st.header('st.write')
 ```
 
 **Example 1**
-Its basic use case is to display text and Markdown-formatted text:
+Display basic text and an emoji (with markdown):
 
 ```python
 st.write('Hello, *World!* :sunglasses:')
 ```
 
 **Example 2**
-As mentioned above, it can also be used to display other data formats such as numbers:
+Display other data formats such as numbers:
 
 ```python
 st.write(1234)
 ```
 
 **Example 3**
-DataFrames can also be displayed as follows:
+Display a DataFrame:
 
 ```python
 df = pd.DataFrame({
@@ -103,7 +108,7 @@ st.write(df)
 ```
 
 **Example 4**
-You can pass in multiple arguments:
+You can concatenate strings and DataFrames, like so:
 
 ```python
 st.write('Below is a DataFrame:', df, 'Above is a dataframe.')
@@ -120,6 +125,20 @@ c = alt.Chart(df2).mark_circle().encode(
      x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
 st.write(c)
 ```
+
+---
+
+## Run the app
+
+Click on the terminal tab at the bottom of the PyCharm interface. 
+
+In the terminal, enter the following:
+
+```
+streamlit run st-app-03.py
+```
+
+---
 
 ## Demo app
 

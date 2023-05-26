@@ -1,1 +1,1 @@
-In this lesson, we will 
+In this lesson, we will build a simple app that uses st.write widget to display various objects.
