@@ -18,20 +18,21 @@ Follow the following steps to create a GitHub repository:
 - In the top right hand corner, click on the **"+"** icon which should reveal a drop-down menu, then click on 
 **"New repository"**.
 
-![fig-01](../lessons/figures/st-fig-01.png)
+[//]: # (![fig-01]&#40;../lessons/figures/st-fig-01.png&#41;)
+
 - This should bring to a new webpage called **"Create a new repository"**. Under the **"Repository name"** field, 
 enter a name for your repository, for example, `AIM-2023-Share`.
 - Under the **"Initialize this repository with:"** field, tick on **"Add a README file"**.
 - Finally, click on **"Create repository"**.
 
-![fig-02](https://github.com/geoff-cox/streamlit-lessons/blob/main/lessons/figures/st-fig-01.png)
+[//]: # (![fig-02]&#40;https://github.com/geoff-cox/streamlit-lessons/blob/main/lessons/figures/st-fig-01.png&#41;)
 
 
 ## Upload files to the GitHub repo
 
 Slightly above the file table and adjacent to the green **Code** button, click on **Add file** > **Upload files**.
 
-![fig-03](./lessons/figures/st-fig-03.png)
+[//]: # (![fig-03]&#40;./lessons/figures/st-fig-03.png&#41;)
 
 This will bring you to a new webpage where the central box says ***Drag files here to add them to your repository*** and **choose your files**, which you can either drag-and-drop files into this box or click on the **choose your files** link to choose files from your local computer.
 
