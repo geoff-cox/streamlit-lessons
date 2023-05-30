@@ -26,6 +26,7 @@ enter a name for your repository, for example, `AIM-2023-Share`.
 
 ![fig-02](https://github.com/geoff-cox/streamlit-lessons/blob/main/lessons/figures/st-fig-01.png)
 
+
 ## Upload files to the GitHub repo
 
 Slightly above the file table and adjacent to the green **Code** button, click on **Add file** > **Upload files**.
