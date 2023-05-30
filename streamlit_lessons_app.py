@@ -19,7 +19,7 @@ with col2:
 
 st.markdown("# Streamlit Practice Lessons")
 
-finished_lessons = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+finished_lessons = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
 # Markdown files for the summaries and lessons
 # summary_list = [f"Summary {x}" for x in md_files]
