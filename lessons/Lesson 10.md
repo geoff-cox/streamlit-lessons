@@ -24,13 +24,13 @@ enter a name for your repository, for example, `AIM-2023-Share`.
 - Under the **"Initialize this repository with:"** field, tick on **"Add a README file"**.
 - Finally, click on **"Create repository"**.
 
-![fig-02](../lessons/figures/st-fig-02.png)
+![fig-02](lessons/figures/st-fig-02.png)
 
 ## Upload files to the GitHub repo
 
 Slightly above the file table and adjacent to the green **Code** button, click on **Add file** > **Upload files**.
 
-![fig-03](../lessons/figures/st-fig-03.png)
+![fig-03](./lessons/figures/st-fig-03.png)
 
 This will bring you to a new webpage where the central box says ***Drag files here to add them to your repository*** and **choose your files**, which you can either drag-and-drop files into this box or click on the **choose your files** link to choose files from your local computer.
 
