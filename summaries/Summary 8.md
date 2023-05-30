@@ -1,1 +1,1 @@
-In this lesson, we will 
+In this lesson, we will create an app that uses the `st.multiselect` widget.
